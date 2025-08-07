@@ -2,6 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --utama:#2C2C2C;
+    --warna1:#D4AF37;
+    --warna2:#F5F5F5;
+    --teks1:#D4AF37;
+    --teks2:#666666;
+    --highlight:#A32F2F;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +19,64 @@ html {
     outline: none;
 }
 
+body {
+    background-color: var(--utama);
+    font-family: "Poppins";
+    color: #fff;
+}
+
 .navbar {
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #D4AF37;
+    padding: 1.4rem 7%;
+}
+
+.navbar-logo {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.navbar-logo span {
+    color: #D4AF37;
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    margin: 0.1rem;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--teks1);
+}
+
+.navbar .navbar-nav a:after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem ;
+    border-bottom: 0.1rem solid var(--teks1);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.hero {
+    background-image: url(./gambar);
+}
+
+.hero .content {
+
 }
